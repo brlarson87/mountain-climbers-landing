@@ -1,0 +1,65 @@
+.input-container {
+  position: relative;
+  text-align: center;
+  padding: 2.5rem 0;
+
+  .contact-heading {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .contact-form {
+    position: absolute;
+    left: 50%;
+    width: 25%;
+    transform: translateX(-50%);
+  }
+
+  .email-input {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 1rem;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    border-color: #00004c;
+
+    &:focus,
+    &:active {
+      outline: none;
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    &::placeholder {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #00004c;
+      font-size: 1.2rem;
+      transform: translateX(3rem);
+    }
+  }
+
+  .submit {
+    display: inline-block;
+    width: 30%;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border-radius: 0.8rem;
+    color: white;
+    background-image: radial-gradient(
+      lighten(#00004c, 15%),
+      lighten(#00004c, 25%)
+    );
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.description {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 0;
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    background-image: linear-gradient(to right, lighten(#00004c, 64%), #000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+  }
+
+  &__explained {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+  }
+}
