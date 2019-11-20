@@ -5,6 +5,12 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 80em) {
+    html {
+      font-size: 55%; } }
+  @media (max-width: 50.5em) {
+    html {
+      font-size: 48%; } }
 
 body {
   box-sizing: border-box;
@@ -18,7 +24,7 @@ body {
   bottom: 0;
   height: 100vh;
   width: 100vw;
-  overflow: hidden; }
+  overflow: auto; }
 
 .active {
   background-color: #fff; }
@@ -27,21 +33,35 @@ body {
   position: relative;
   height: 65%;
   background-color: #000;
-  z-index: 5; }
+  z-index: 5;
+  overflow: hidden; }
+  @media (max-width: 50.5em) {
+    .image-container {
+      height: 40%; } }
   .image-container .nav-btns {
     position: absolute;
     display: flex;
-    width: 5%;
+    width: 7%;
     justify-content: space-between;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%); }
+    @media (max-width: 80em) {
+      .image-container .nav-btns {
+        width: 9%; } }
+    @media (max-width: 50.5em) {
+      .image-container .nav-btns {
+        width: 20%; } }
     .image-container .nav-btns__btn {
       cursor: pointer;
       height: 1.2rem;
       width: 1.2rem;
       border: solid 2px #fff;
       border-radius: 100%; }
+      @media (max-width: 80em) {
+        .image-container .nav-btns__btn {
+          height: 1.5rem;
+          width: 1.5rem; } }
   .image-container .image {
     position: absolute;
     top: 0;
@@ -54,6 +74,9 @@ body {
     .image-container .image__img {
       width: 100%;
       height: 100%; }
+      @media (max-width: 50.5em) {
+        .image-container .image__img {
+          width: 150%; } }
     .image-container .image__title {
       position: absolute;
       bottom: 18%;
@@ -67,6 +90,12 @@ body {
       font-family: "Acme", sans-serif;
       will-change: opacity;
       text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); }
+      @media (max-width: 50.5em) {
+        .image-container .image__title {
+          font-size: 4.5rem;
+          letter-spacing: 2px;
+          bottom: 17%;
+          white-space: nowrap; } }
     .image-container .image__rating {
       position: absolute;
       bottom: 12.5%;
@@ -77,6 +106,10 @@ body {
       opacity: 0;
       will-change: opacity;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9), -1px -1px 0 rgba(0, 0, 0, 0.9); }
+      @media (max-width: 50.5em) {
+        .image-container .image__rating {
+          font-size: 1.6rem;
+          bottom: 11.5%; } }
       .image-container .image__rating .rate {
         display: inline-block;
         margin-left: 1rem;
@@ -105,6 +138,10 @@ body {
   background-color: #00004c;
   padding: 0.3rem 0 1rem 0;
   margin-top: -1.2rem; }
+  @media (max-width: 50.5em) {
+    .header {
+      padding: 2.5rem 0 5rem 0;
+      text-align: center; } }
   .header .main-title {
     color: white;
     font-size: 1.8rem;
@@ -118,15 +155,25 @@ body {
     margin-left: 1.4rem;
     background-color: #fff;
     transform: translateY(0.5rem); }
+    @media (max-width: 50.5em) {
+      .header .vert-bar {
+        opacity: 0; } }
   .header .mtn-img {
     width: 4rem;
     transform: translate(1rem, 1rem); }
+    @media (max-width: 50.5em) {
+      .header .mtn-img {
+        width: 4.5rem;
+        transform: translate(-11rem, 5.2rem); } }
 
 .description {
   width: 65%;
   margin: 0 auto;
   text-align: center;
   padding: 2rem 0; }
+  @media (max-width: 50.5em) {
+    .description {
+      padding: 3.5rem 0; } }
   .description__title {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -136,23 +183,46 @@ body {
     background-clip: text;
     color: transparent;
     text-transform: uppercase; }
+    @media (max-width: 50.5em) {
+      .description__title {
+        margin-bottom: 2rem; } }
   .description__explained {
     font-size: 1.3rem;
     font-weight: 300;
     margin-bottom: 0.75rem; }
+    @media (max-width: 50.5em) {
+      .description__explained {
+        line-height: 2.5rem;
+        font-weight: 600; } }
 
 .input-container {
   position: relative;
   text-align: center;
   padding: 2.5rem 0; }
+  @media (max-width: 80em) {
+    .input-container {
+      padding: 4rem 0; } }
+  @media (max-width: 50.5em) {
+    .input-container {
+      padding: 5rem 0; } }
   .input-container .contact-heading {
     margin-bottom: 1rem;
     font-size: 1.8rem; }
+    @media (max-width: 80em) {
+      .input-container .contact-heading {
+        margin-bottom: 1.5rem;
+        font-size: 2.5rem; } }
+    @media (max-width: 50.5em) {
+      .input-container .contact-heading {
+        margin-bottom: 2rem; } }
   .input-container .contact-form {
     position: absolute;
     left: 50%;
     width: 25%;
     transform: translateX(-50%); }
+    @media (max-width: 50.5em) {
+      .input-container .contact-form {
+        width: 50%; } }
   .input-container .email-input {
     display: inline-block;
     width: 50%;
@@ -160,6 +230,13 @@ body {
     padding: 1rem 3rem;
     border-radius: 10rem;
     border-color: #00004c; }
+    @media (max-width: 80em) {
+      .input-container .email-input {
+        width: 75%; } }
+    @media (max-width: 50.5em) {
+      .input-container .email-input {
+        width: 100%;
+        margin-bottom: 1.5rem; } }
     .input-container .email-input:focus, .input-container .email-input:active {
       outline: none; }
       .input-container .email-input:focus::placeholder, .input-container .email-input:active::placeholder {
@@ -170,6 +247,13 @@ body {
       color: #00004c;
       font-size: 1.2rem;
       transform: translateX(3rem); }
+      @media (max-width: 110em) {
+        .input-container .email-input::placeholder {
+          transform: translateX(0.5rem);
+          font-size: 1rem; } }
+      @media (max-width: 50.5em) {
+        .input-container .email-input::placeholder {
+          font-size: 1.5rem; } }
   .input-container .submit {
     display: inline-block;
     width: 30%;
@@ -179,6 +263,9 @@ body {
     color: white;
     background-image: radial-gradient(#000099, #0000cc);
     border: none; }
+    @media (max-width: 50.5em) {
+      .input-container .submit {
+        width: 50%; } }
     .input-container .submit:hover {
       cursor: pointer; }
     .input-container .submit:active {

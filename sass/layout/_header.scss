@@ -4,6 +4,11 @@
   padding: 0.3rem 0 1rem 0;
   margin-top: -1.2rem;
 
+  @include respond(phone) {
+    padding: 2.5rem 0 5rem 0;
+    text-align: center;
+  }
+
   .main-title {
     color: white;
     font-size: 1.8rem;
@@ -19,10 +24,19 @@
     margin-left: 1.4rem;
     background-color: #fff;
     transform: translateY(0.5rem);
+
+    @include respond(phone) {
+      opacity: 0;
+    }
   }
 
   .mtn-img {
     width: 4rem;
     transform: translate(1rem, 1rem);
+
+    @include respond(phone) {
+      width: 4.5rem;
+      transform: translate(-11rem, 5.2rem);
+    }
   }
 }
