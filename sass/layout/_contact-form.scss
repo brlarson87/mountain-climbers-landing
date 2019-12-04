@@ -16,19 +16,19 @@
     font-size: 1.8rem;
 
     @include respond(tab-land) {
-      margin-bottom: 1.5rem;
-      font-size: 2.5rem;
+      margin-top: 5rem;
     }
 
     @include respond(phone) {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
     }
   }
 
   .contact-form {
     position: absolute;
     left: 50%;
-    width: 25%;
+    width: 40%;
     transform: translateX(-50%);
 
     @include respond(phone) {
@@ -38,7 +38,7 @@
 
   .email-input {
     display: inline-block;
-    width: 50%;
+    width: 45%;
     margin-bottom: 1rem;
     padding: 1rem 3rem;
     border-radius: 10rem;
@@ -67,11 +67,10 @@
       font-weight: 700;
       color: #00004c;
       font-size: 1.2rem;
-      transform: translateX(3rem);
+      opacity: 0.65;
 
       @include respond(desk) {
-        transform: translateX(0.5rem);
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
 
       @include respond(phone) {
@@ -82,7 +81,7 @@
 
   .submit {
     display: inline-block;
-    width: 30%;
+    width: 45%;
     text-transform: uppercase;
     padding: 1rem 1.5rem;
     border-radius: 0.8rem;
@@ -94,7 +93,7 @@
     border: none;
 
     @include respond(phone) {
-      width: 50%;
+      width: 90%;
     }
 
     &:hover {
